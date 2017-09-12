@@ -28,7 +28,7 @@
     'author': "Humanytek",
     'website': "http://www.humanytek.com",
     'category': 'Stock',
-    'version': '0.1.0',
+    'version': '1.0.0',
     'depends': ['stock', 'stock_warehouse_returns'],
     'data': [
         'views/stock_picking_view.xml',
