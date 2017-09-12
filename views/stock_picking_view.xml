@@ -18,5 +18,26 @@
             </field>
         </record>
 
+        <record id="view_return_picking_reason_search" model="ir.ui.view">
+            <field name="name">picking.return.reason.search</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+            <field name="arch" type="xml">
+
+                <field name="group_id"  position="after">
+                  <field name="return_reason_id" />
+                </field>
+
+                <filter name="picking_type" position="after">
+                  <filter
+                    name="return_reason"
+                    string="Reason for return of stock"
+                    domain="[]"
+                    context="{'group_by':'return_reason_id'}"/>
+                </filter>
+
+            </field>
+        </record>
+
     </data>
 </openerp>
